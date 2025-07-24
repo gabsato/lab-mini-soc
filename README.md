@@ -57,3 +57,7 @@ Para garantir a validação da pipeline de alertas, uma segunda simulação mais
 
 ## 6. Análise de Resultados e Evidências
 A simulação de falha de sudo foi imediatamente detectada pelo agente Wazuh no Ubuntu e reportada ao servidor, gerando um alerta de alta severidade.
+![Three failed attempts to run sudo](https://github.com/gabsato/lab-mini-soc/blob/main/assets/wazuh-alert-rule-10.png?raw=true)
+
+### Análise do alerta
+- rule.id: 5503, 5504: Correspondem às regras de falha de autenticação e falhas múltiplas.
