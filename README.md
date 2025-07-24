@@ -1,6 +1,6 @@
 # Laboratório de Análise de Ameaças com Wazuh (Mini SOC)
 
-## 1. Resumo Executivo
+## 1. Resumo do projeto
 Este projeto consistiu na criação de um laboratório de cibersegurança (Mini SOC) totalmente funcional, utilizando ferramentas open-source para simular um ambiente corporativo. O objetivo foi implementar uma solução de monitoramento contínuo com o Wazuh (SIEM/EDR), configurar agentes em diferentes sistemas operacionais (Windows e Linux), simular uma ameaça interna e analisar os alertas gerados. O projeto abrangeu desde a arquitetura da infraestrutura virtual até à investigação de eventos de segurança, passando pela resolução metódica de desafios de conectividade e configuração.
 
 ## 2. Objetivo do Projeto
