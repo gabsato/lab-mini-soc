@@ -57,7 +57,20 @@ Para garantir a validação da pipeline de alertas, uma segunda simulação mais
 
 ## 6. Análise de Resultados e Evidências
 A simulação de falha de sudo foi imediatamente detectada pelo agente Wazuh no Ubuntu e reportada ao servidor, gerando um alerta de alta severidade.
-![Three failed attempts to run sudo]()
+![Three failed attempts to run sudo](https://github.com/gabsato/lab-mini-soc/blob/main/assets/wazuh-alert-rule-10.png?raw=true)
 
 ### Análise do alerta
 - rule.id: 5503, 5504: Correspondem às regras de falha de autenticação e falhas múltiplas.
+- rule.level: 10: Classificado como um evento de alta severidade (Crítico), exigindo atenção imediata de um analista.
+- rule.description: Three failed attempts to run sudo: Descreve claramente a natureza da ameaça.
+- agent.name: zinoproxy-VirtualBox: Identifica com precisão o endpoint onde a atividade suspeita ocorreu.
+
+## 7. Conceitos de segurança aplicados
+- SIEM (Security Information and Event Management): O Wazuh foi usado como um SIEM para agregar, analisar e correlacionar dados de log de múltiplas fontes em tempo real.
+- EDR (Endpoint Detection and Response): O agente Wazuh atuou como um EDR, monitorando ativamente os endpoints em busca de atividades maliciosas e fornecendo capacidade de resposta.
+- Princípio do menor privilégio: A tentativa de usar sudo e a sua detecção reforçam a importância de monitorar o uso de privilégios elevados no sistema.
+- Segmentação de rede: O uso de uma rede Host-Only demonstra o conceito de segmentar um ambiente para controlar o tráfego e aumentar a segurança.
+
+## Conclusões e aprendizados
+Este projeto foi uma jornada prática e aprofundada pelo ciclo de vida de uma operação de segurança. Os desafios encontrados, longe de serem obstáculos, foram as melhores oportunidades de aprendizado, forçando uma investigação metódica de problemas de rede, serviços e configuração, competências essenciais para qualquer profissional de cibersegurança.
+A conclusão é que a implementação de um SIEM como o Wazuh é uma ferramenta poderosa para ganhar visibilidade sobre o ambiente e detectar ameaças, mas o seu verdadeiro valor é desbloqueado pela capacidade do analista de configurar, manter e, principalmente, investigar os alertas gerados.
